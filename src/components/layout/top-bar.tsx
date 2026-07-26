@@ -61,16 +61,20 @@ export function TopBar({ user }: { user: AppUser | null }) {
   {user ? (
     <DropdownMenu>
     <DropdownMenuTrigger asChild>
-      <button className="flex items-center gap-3 rounded-2xl border border-border bg-background/70 px-3 py-2 transition-colors hover:bg-accent outline-none">
-        <Avatar className="h-10 w-10">
+      <button className="flex items-center gap-3 rounded-2xl border border-border bg-background/70 px-3 py-2 transition-colors hover:bg-accent outline-none max-w-full">
+        <Avatar className="h-10 w-10 shrink-0">
           <AvatarFallback>{user.avatarFallback}</AvatarFallback>
         </Avatar>
 
-        <div className="text-left">
-          <p className="text-sm font-semibold">{user.name}</p>
-          <p className="text-xs text-muted-foreground">{user.plan}</p>
-        </div>
-      </button>
+      <div className="min-w-0 text-left">
+        <p className="truncate text-sm font-semibold">
+          {user.name}
+        </p>
+        <p className="truncate text-xs text-muted-foreground">
+          {user.plan}
+        </p>
+      </div>
+    </button>
     </DropdownMenuTrigger>
 
     <DropdownMenuContent align="end" className="w-56">
