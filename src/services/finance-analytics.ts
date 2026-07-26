@@ -146,23 +146,28 @@ export function buildSummaryMetrics(
     .reduce((total, transaction) => total + transaction.amount, 0);
   const savings = totalIncome - totalExpense;
 
+   const currentMonthYear = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    year: "numeric",
+  }).format(new Date());
+
   return [
     {
       label: "Total Balance",
       value: totalBalance,
-      delta: "Across 4 wallets",
+      delta: "In the wallet",
       accent: "from-emerald-500/20 to-emerald-500/5"
     },
     {
       label: "Income",
       value: totalIncome,
-      delta: "July 2026 inflow",
+      delta: `${currentMonthYear} inflow`,
       accent: "from-teal-500/20 to-teal-500/5"
     },
     {
       label: "Expense",
       value: totalExpense,
-      delta: "July 2026 burn",
+      delta: `${currentMonthYear} burn`,
       accent: "from-amber-500/20 to-amber-500/5"
     },
     {

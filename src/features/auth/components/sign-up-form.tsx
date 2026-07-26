@@ -128,7 +128,7 @@ export function SignUpForm({ note }: SignUpFormProps) {
                 id="email"
                 type="email"
                 autoComplete="email"
-                placeholder="nama@email.com"
+                placeholder="example@gmail.com"
                 disabled={isPending}
                 className="pl-10"
                 {...form.register("email")}

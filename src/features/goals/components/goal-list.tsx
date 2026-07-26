@@ -19,11 +19,11 @@ export function GoalList({
     <Card>
       <CardHeader>
         <CardTitle>Financial goals</CardTitle>
-        <CardDescription>Target tabungan jangka menengah dan kontribusi terbaru.</CardDescription>
+        <CardDescription>MAAF, SEDANG DALAM PENGEMBANGAN.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {items.length === 0 ? (
-          <p className="text-sm text-muted-foreground">Belum ada goal aktif. Kamu bisa mulai dari emergency fund.</p>
+          <p className="text-sm text-muted-foreground">Fitur ini belum tersedia.</p>
         ) : null}
 
         {items.map((goal) => {

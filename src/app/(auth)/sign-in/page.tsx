@@ -26,11 +26,11 @@ export default async function SignInPage({
     <div className="mx-auto grid min-h-[calc(100vh-2rem)] max-w-6xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
       <div className="space-y-6 rounded-[32px] border border-white/40 bg-card/70 p-8 shadow-soft backdrop-blur-xl dark:border-white/10">
         <p className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-600 dark:text-emerald-400">
-          Finora access
+          NexFin access
         </p>
         <div className="space-y-3">
           <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Ruang pribadi untuk keputusan finansial yang lebih sadar.
+            Semua keuanganmu, tersusun rapi dalam satu tempat
           </h1>
           <p className="max-w-2xl text-base text-muted-foreground">
             Website ini menyiapkan dashboard, wallets, transactions, budgets, goals, dan reports dalam satu alur yang terasa ringan tapi tetap production-minded.
@@ -42,7 +42,7 @@ export default async function SignInPage({
             {
               icon: BarChart3,
               title: "Insight real-time",
-              description: "Chart cash flow, expense categories, dan budget progress."
+              description: "Dashboard interaktif dengan insight keuangan real-time."
             },
             {
               icon: PiggyBank,
@@ -51,8 +51,8 @@ export default async function SignInPage({
             },
             {
               icon: ShieldCheck,
-              title: "Supabase ready",
-              description: "Auth, RLS, dan server action sudah dipersiapkan."
+              title: "Security System",
+              description: "Data Anda dilindungi dengan sistem autentikasi yang aman dan teknologi enkripsi modern."
             }
           ].map((item) => {
             const Icon = item.icon;

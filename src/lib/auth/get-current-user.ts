@@ -34,7 +34,7 @@ export async function getCurrentUser(): Promise<AppUser | null> {
     id: user.id,
     name: fallbackName,
     email: user.email ?? "",
-    plan: "Supabase Auth",
+    plan: "User Account",
     avatarFallback: fallbackName.slice(0, 2).toUpperCase()
   };
 }

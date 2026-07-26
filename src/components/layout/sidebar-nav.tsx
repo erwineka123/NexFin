@@ -14,9 +14,9 @@ export function SidebarNav() {
       <div className="flex min-h-0 flex-1 flex-col gap-6">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-600 dark:text-emerald-400">
-            Finora
+            Nexfin
           </p>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Personal finance, tersusun rapi.</h2>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight">Keuangan, Lebih Rapi</h2>
         </div>
 
         <nav className="min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">

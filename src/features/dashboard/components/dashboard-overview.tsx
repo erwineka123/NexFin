@@ -22,7 +22,11 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
             <div className="max-w-2xl space-y-5">
               <div className="flex items-center gap-2 text-sm font-medium text-emerald-700 dark:text-emerald-300">
                 <Sparkles className="h-4 w-4" />
-                July 2026 momentum
+                  {new Intl.DateTimeFormat("en-US", {
+                  month: "long",
+                  year: "numeric",
+                  }).format(new Date())}{" "}
+                  momentum
               </div>
               <div className="space-y-2">
                 <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">

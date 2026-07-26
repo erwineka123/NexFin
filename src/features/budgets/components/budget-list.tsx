@@ -31,11 +31,11 @@ export function BudgetList({
     <Card>
       <CardHeader>
         <CardTitle>Budget progress</CardTitle>
-        <CardDescription>Monitor pengeluaran bulanan agar tetap sesuai porsi kategori.</CardDescription>
+        <CardDescription>MOHON MAAF, SEDANG DALAM PENGEMBANGAN.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {items.length === 0 ? (
-          <p className="text-sm text-muted-foreground">Belum ada budget aktif untuk bulan ini.</p>
+          <p className="text-sm text-muted-foreground">Fitur ini belum tersedia.</p>
         ) : null}
 
         {items.map((budget) => (

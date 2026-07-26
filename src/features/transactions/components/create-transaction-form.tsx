@@ -112,7 +112,7 @@ export function CreateTransactionForm({
 
             <div className="space-y-2">
               <Label htmlFor="amount">Amount</Label>
-              <Input id="amount" type="number" min={0} step={1000} {...form.register("amount")} />
+              <Input id="amount" type="number" min={0} {...form.register("amount")} />
             </div>
           </div>
 

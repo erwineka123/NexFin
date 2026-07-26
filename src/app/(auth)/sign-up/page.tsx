@@ -31,13 +31,13 @@ export default async function SignUpPage({
       <div className="space-y-6 rounded-[32px] border border-white/40 bg-card/70 p-8 shadow-soft backdrop-blur-xl dark:border-white/10">
 
         <p className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-600 dark:text-emerald-400">
-          Join Finora
+          Join NexFin
         </p>
 
         <div className="space-y-3">
 
           <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Mulai perjalanan finansialmu hari ini.
+            Mulai kelola keuanganmu sekarang juga.
           </h1>
 
           <p className="max-w-2xl text-base text-muted-foreground">
@@ -64,7 +64,7 @@ export default async function SignUpPage({
             },
             {
               icon: ShieldCheck,
-              title: "Secure by Supabase",
+              title: "Security System",
               description:
                 "Autentikasi aman dengan Row Level Security dan Supabase Auth.",
             },

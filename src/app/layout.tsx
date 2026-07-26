@@ -7,8 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Finora",
-    template: "%s | Finora"
+    default: "NexFin",
+    template: "%s | NexFin"
   },
   description: "Website financial pribadi modern untuk mencatat cash flow, budget, goal, dan insight harian."
 };

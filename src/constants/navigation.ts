@@ -57,7 +57,7 @@ export const APP_NAVIGATION: NavigationItem[] = [
   {
     href: "/settings",
     label: "Settings",
-    description: "Theme, Supabase, dan preferensi",
+    description: "Profile",
     icon: Settings2
   }
 ];

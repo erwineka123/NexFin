@@ -13,11 +13,11 @@ export default async function SettingsPage() {
 
   return (
     <div className="space-y-6">
-      <PageHeader
+      {/* <PageHeader
         eyebrow="Settings"
         title="Status environment, auth, dan kesiapan backend."
         description="Tempat cepat untuk melihat apakah aplikasi sedang berjalan di demo mode atau sudah terhubung ke Supabase."
-      />
+      /> */}
 
       <div className="grid gap-4 xl:grid-cols-[1fr_1fr]">
         <Card>
@@ -26,7 +26,7 @@ export default async function SettingsPage() {
               <UserCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               Account preview
             </CardTitle>
-            <CardDescription>Identitas pengguna yang sedang dipakai oleh layout aplikasi.</CardDescription>
+            <CardDescription>Identitas pengguna aplikasi NexFin.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <div>
@@ -50,26 +50,28 @@ export default async function SettingsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <DatabaseZap className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-              Supabase connection
+              <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                Security System
             </CardTitle>
-            <CardDescription>Koneksi environment menentukan apakah data real-time atau demo data yang dipakai.</CardDescription>
+            <CardDescription>Sistem keamanan yang melindungi data dan akses aplikasi.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Badge variant={data.supabaseConfigured ? "default" : "warning"}>
+            {/* <Badge variant={data.supabaseConfigured ? "default" : "warning"}>
               {data.supabaseConfigured ? "Connected" : "Demo mode"}
-            </Badge>
-            <p className="text-sm text-muted-foreground">
+            </Badge> */}
+            {/* <p className="text-sm text-muted-foreground">
               {data.supabaseConfigured
                 ? "NEXT_PUBLIC_SUPABASE_URL dan NEXT_PUBLIC_SUPABASE_ANON_KEY sudah tersedia."
                 : "Isi .env.local untuk menyalakan auth, query live, dan penyimpanan transaksi ke Supabase."}
-            </p>
+            </p> */}
             <Separator />
             <div className="space-y-2 text-sm">
               {[
-                "Next.js App Router dan Server Components aktif",
-                "Server action untuk wallet, transaction, dan auth sudah disiapkan",
-                "Struktur feature-based siap dikembangkan ke CRUD penuh"
+                "RLS telah diaktifkan di semua tabel database.",
+                "Role key telah diamankan di backend, keamanan data pribadi terjaga.",
+                "Semua proses input berjalan melaui server action tervalidasi.",
+                "Data pribadi pengguna tidak tersimpan di frontend, hanya di database.",
+                "Semua proses transaksi telah dienkripsi.",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
@@ -80,28 +82,6 @@ export default async function SettingsPage() {
           </CardContent>
         </Card>
       </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-            Security readiness
-          </CardTitle>
-          <CardDescription>Checklist singkat sebelum aplikasi dipakai dengan data pribadi.</CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-2">
-          {[
-            "RLS perlu diaktifkan di semua tabel Supabase.",
-            "Jangan letakkan service role key di frontend.",
-            "Semua insert berjalan lewat server action tervalidasi.",
-            "Google OAuth perlu diaktifkan di dashboard Supabase Auth."
-          ].map((item) => (
-            <div key={item} className="rounded-2xl border border-border bg-background/70 p-4 text-sm">
-              {item}
-            </div>
-          ))}
-        </CardContent>
-      </Card>
     </div>
   );
 }

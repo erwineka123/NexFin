@@ -21,7 +21,7 @@ export function CreateWalletForm() {
     resolver: zodResolver(walletSchema),
     defaultValues: {
       name: "",
-      startingBalance: 100000,
+      // startingBalance: 100000,
       icon: "Wallet",
       color: "#10b981"
     }
@@ -35,7 +35,7 @@ export function CreateWalletForm() {
       if (result.success) {
         form.reset({
           name: "",
-          startingBalance: 100000,
+          // startingBalance: 100000,
           icon: "Wallet",
           color: "#10b981"
         });
@@ -53,13 +53,13 @@ export function CreateWalletForm() {
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="wallet-name">Wallet name</Label>
-            <Input id="wallet-name" placeholder="Mis. BCA Payroll" {...form.register("name")} />
+            <Input id="wallet-name" placeholder="Mis. BCA" {...form.register("name")} />
             <p className="text-sm text-rose-500">{form.formState.errors.name?.message}</p>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="wallet-balance">Starting balance</Label>
-            <Input id="wallet-balance" type="number" min={0} step={1000} {...form.register("startingBalance")} />
+            <Input id="wallet-balance" type="number" min={0} {...form.register("startingBalance")} />
             <p className="text-sm text-rose-500">{form.formState.errors.startingBalance?.message}</p>
           </div>
 

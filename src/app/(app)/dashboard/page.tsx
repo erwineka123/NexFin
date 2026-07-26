@@ -13,7 +13,7 @@ export default async function DashboardPage() {
     <div className="space-y-6">
       <PageHeader
         eyebrow="Overview"
-        title={`Halo ${firstName}, ini pulse keuanganmu.`}
+        title={`Halo ${firstName}, ini pulse keuanganmu`}
         description="Dashboard ini merangkum saldo, cash flow, budget, goals, dan reminder penting agar keputusan harian terasa lebih ringan."
         actions={
           <>

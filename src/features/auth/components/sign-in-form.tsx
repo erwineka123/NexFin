@@ -94,7 +94,7 @@ export function SignInForm({ note }: { note?: string }) {
               <Input
                 id="email"
                 type="email"
-                placeholder="nama@email.com"
+                placeholder="example@gmail.com"
                 className="pl-10"
                 {...form.register("email")}
               />
