@@ -44,12 +44,12 @@ export function ReminderFeed({ initialNotifications }: { initialNotifications: N
 
         {query.data.map((item) => (
           <div key={item.id} className="rounded-2xl border border-border bg-background/70 p-4">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="font-medium">{item.title}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{item.body}</p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="min-w-0 flex-1">
+                <p className="font-medium break-words">{item.title}</p>
+                <p className="mt-1 break-words text-sm text-muted-foreground">{item.body}</p>
               </div>
-              <Badge variant={toneVariant(item.tone)}>{item.isRead ? "Read" : "New"}</Badge>
+              <Badge className="w-fit shrink-0" variant={toneVariant(item.tone)}>{item.isRead ? "Read" : "New"}</Badge>
             </div>
             <p className="mt-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               {formatShortDate(item.dueAt)}
