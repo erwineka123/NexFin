@@ -37,6 +37,12 @@ export const APP_NAVIGATION: NavigationItem[] = [
     icon: CircleDollarSign
   },
   {
+    href: "/reports",
+    label: "Reports",
+    description: "Analitik harian hingga tahunan",
+    icon: ChartColumnBig
+  },
+  {
     href: "/budgets",
     label: "Budgets",
     description: "Batas pengeluaran per kategori",
@@ -47,12 +53,6 @@ export const APP_NAVIGATION: NavigationItem[] = [
     label: "Goals",
     description: "Target tabungan dan progres",
     icon: Goal
-  },
-  {
-    href: "/reports",
-    label: "Reports",
-    description: "Analitik harian hingga tahunan",
-    icon: ChartColumnBig
   },
   {
     href: "/settings",

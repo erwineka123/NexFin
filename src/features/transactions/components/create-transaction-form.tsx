@@ -35,7 +35,7 @@ export function CreateTransactionForm({
     defaultValues: {
       walletId: wallets[0]?.id ?? "",
       categoryId: categories[0]?.id ?? "",
-      amount: 0,
+      // amount: 0,
       transactionDate: "2026-07-26T09:00",
       note: "",
       type: "expense"
@@ -60,7 +60,7 @@ export function CreateTransactionForm({
       if (result.success) {
         form.reset({
           ...values,
-          amount: 0,
+          // amount: 0,
           note: ""
         });
       }
@@ -112,7 +112,7 @@ export function CreateTransactionForm({
 
             <div className="space-y-2">
               <Label htmlFor="amount">Amount</Label>
-              <Input id="amount" type="number" min={0} {...form.register("amount")} />
+              <Input id="amount" type="number" {...form.register("amount")} />
             </div>
           </div>
 
