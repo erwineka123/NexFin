@@ -81,11 +81,11 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         </Card>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      {/* <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {data.summary.map((item) => (
           <SummaryCard key={item.label} item={item} />
         ))}
-      </div>
+      </div> */}
 
       {/* <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <Card>
