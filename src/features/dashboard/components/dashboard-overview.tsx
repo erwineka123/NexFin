@@ -81,13 +81,13 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         </Card>
       </div>
 
-      {/* <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {data.summary.map((item) => (
           <SummaryCard key={item.label} item={item} />
         ))}
-      </div> */}
+      </div>
 
-      {/* <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
+      <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <Card>
           <CardHeader className="pb-4">
             <CardTitle>Monthly cash flow</CardTitle>
@@ -121,12 +121,12 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
             </div>
           </CardContent>
         </Card>
-      </div> */}
+      </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
+      {/* <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
         <TransactionTable transactions={data.recentTransactions} limit={6} compact />
         <ReminderFeed initialNotifications={data.notifications} />
-      </div>
+      </div> */}
 
       <div className="grid gap-4 xl:grid-cols-2">
         <BudgetList budgets={data.budgets} limit={4} />
