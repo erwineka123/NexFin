@@ -87,7 +87,7 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         ))}
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
+      {/* <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <Card>
           <CardHeader className="pb-4">
             <CardTitle>Monthly cash flow</CardTitle>
@@ -121,7 +121,7 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
             </div>
           </CardContent>
         </Card>
-      </div>
+      </div> */}
 
       <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
         <TransactionTable transactions={data.recentTransactions} limit={6} compact />
