@@ -123,10 +123,10 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         </Card>
       </div>
 
-      {/* <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
+      <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
         <TransactionTable transactions={data.recentTransactions} limit={6} compact />
         <ReminderFeed initialNotifications={data.notifications} />
-      </div> */}
+      </div>
 
       <div className="grid gap-4 xl:grid-cols-2">
         <BudgetList budgets={data.budgets} limit={4} />
