@@ -16,9 +16,9 @@ import type { DashboardSnapshot } from "@/types/finance";
 export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 xl:grid-cols-[1.3fr_0.9fr]">
+      <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <Card className="overflow-hidden">
-          <CardContent className="surface-grid relative p-8">
+          <CardContent className="surface-grid relative p-5 sm:p-6 lg:p-8">
             <div className="max-w-2xl space-y-5">
               <div className="flex items-center gap-2 text-sm font-medium text-emerald-700 dark:text-emerald-300">
                 <Sparkles className="h-4 w-4" />
@@ -29,21 +29,21 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
                   momentum
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
+                <h3 className="break-words text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
                   Net savings kamu bergerak positif dan budget inti masih terkendali.
                 </h3>
-                <p className="max-w-xl text-sm text-muted-foreground md:text-base">
+                <p className="max-w-xl break-words text-sm text-muted-foreground sm:text-base">
                   Fokus minggu ini ada pada optimasi pengeluaran shopping, sambil tetap menjaga kontribusi ke emergency fund.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center gap-3">
-                <Button asChild>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild className="w-full sm:w-auto">
                   <Link href="/transactions">
                     Tambah transaksi
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="w-full sm:w-auto">
                   <Link href="/reports">Lihat laporan</Link>
                 </Button>
               </div>
@@ -60,12 +60,12 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
             {data.wallets.map((wallet) => (
               <div key={wallet.id} className="space-y-2">
                 <div className="flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
+                  <div className="min-w-0 flex items-center gap-3">
                     <span className="h-3 w-3 rounded-full" style={{ backgroundColor: wallet.color }} />
                     <p className="font-medium">{wallet.name}</p>
                   </div>
-                  <div className="text-right">
-                    <p className="font-medium">{formatCompactCurrency(wallet.balance)}</p>
+                  <div className="shrink-0 text-right">
+                    <p className="truncate font-medium">{formatCompactCurrency(wallet.balance)}</p>
                     <p className="text-xs text-muted-foreground">{wallet.share.toFixed(0)}% of total</p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         ))}
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.35fr_0.95fr]">
+      <div className="grid gap-4 lg:grid-cols-[1.3fr_0.9fr]">
         <Card>
           <CardHeader>
             <CardTitle>Monthly cash flow</CardTitle>
@@ -109,11 +109,11 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
               {data.categoryBreakdown.map((item) => (
                 <div
                   key={item.name}
-                  className="flex items-center justify-between rounded-2xl border border-border bg-background/70 px-4 py-3"
+                  className="flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 border border-border bg-background/70 px-4 py-3"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="min-w-0 flex items-center gap-3">
                     <span className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />
-                    <span className="font-medium">{item.name}</span>
+                    <span className="truncate font-medium">{item.name}</span>
                   </div>
                   <span className="text-sm text-muted-foreground">{formatCompactCurrency(item.value)}</span>
                 </div>
@@ -123,12 +123,12 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         </Card>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
+      <div className="grid gap-4 lg:grid-cols-[1.25fr_0.95fr]">
         <TransactionTable transactions={data.recentTransactions} limit={6} compact />
         <ReminderFeed initialNotifications={data.notifications} />
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         <BudgetList budgets={data.budgets} limit={4} />
         <GoalList goals={data.goals} limit={2} />
       </div>

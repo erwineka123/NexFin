@@ -17,11 +17,19 @@ export default async function DashboardPage() {
         description="Dashboard ini merangkum saldo, cash flow, budget, goals, dan reminder penting agar keputusan harian terasa lebih ringan."
         actions={
           <>
-            <Button asChild variant="outline">
-              <Link href="/wallets">Kelola wallet</Link>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full sm:w-auto"
+            >
+              <Link href="/wallets">Kelola Wallet</Link>
             </Button>
-            <Button asChild>
-              <Link href="/transactions">Tambah transaksi</Link>
+
+            <Button
+              asChild
+              className="w-full sm:w-auto"
+            >
+              <Link href="/transactions">Tambah Transaksi</Link>
             </Button>
           </>
         }
