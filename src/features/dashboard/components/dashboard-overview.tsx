@@ -123,9 +123,27 @@ export function DashboardOverview({ data }: { data: DashboardSnapshot }) {
         </Card>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[1.25fr_0.95fr]">
-        <TransactionTable transactions={data.recentTransactions} limit={6} compact />
+      {/* <div className="grid gap-6 xl:grid-cols-[380px_minmax(0,1fr)]">
+        <TransactionTable className="min-w-0" transactions={data.recentTransactions} limit={6} compact />
         <ReminderFeed initialNotifications={data.notifications} />
+      </div> */}
+
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_380px]">
+        {/* Recent Transactions */}
+        <div className="min-w-0">
+          <TransactionTable
+            transactions={data.recentTransactions}
+            limit={6}
+            compact
+          />
+        </div>
+
+        {/* Reminder */}
+        <div className="min-w-0">
+          <ReminderFeed
+            initialNotifications={data.notifications}
+          />
+        </div>
       </div>
 
       <div className="grid gap-4 xl:grid-cols-2">

@@ -10,7 +10,7 @@ export default async function DashboardPage() {
   const firstName = data.user?.name.split(" ")[0] ?? "teman";
 
   return (
-    <div className="space-y-6">
+    <div className="min-w-0 space-y-6">
       <PageHeader
         eyebrow="Overview"
         title={`Halo ${firstName}, ini pulse keuanganmu`}
@@ -34,8 +34,10 @@ export default async function DashboardPage() {
           </>
         }
       />
-      <DashboardOverview data={data} />
+
+      <div className="min-w-0">
+        <DashboardOverview data={data} />
+      </div>
     </div>
   );
 }
-

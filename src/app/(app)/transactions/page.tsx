@@ -14,11 +14,20 @@ export default async function TransactionsPage() {
         description="Alur ini sudah siap untuk income, expense, dan transfer, lengkap dengan validasi wallet dan kategori."
       />
 
-      <div className="grid gap-4 xl:grid-cols-[0.9fr_1.25fr]">
-        <CreateTransactionForm wallets={data.wallets} categories={data.categories} />
-        <TransactionTable transactions={data.transactions} />
+      <div className="grid gap-6 xl:grid-cols-[380px_minmax(0,1fr)]">
+        {/* Form */}
+        <div className="min-w-0">
+          <CreateTransactionForm
+            wallets={data.wallets}
+            categories={data.categories}
+          />
+        </div>
+
+        {/* Table */}
+        <div className="min-w-0">
+          <TransactionTable transactions={data.transactions} />
+        </div>
       </div>
     </div>
   );
 }
-
