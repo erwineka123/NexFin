@@ -43,9 +43,9 @@ export function MobileNav() {
           <div className="mb-3 flex items-start justify-between gap-3 px-1">
             <div>
               <p className="text-sm font-semibold">More pages</p>
-              <p className="text-xs text-muted-foreground">
+              {/* <p className="text-xs text-muted-foreground">
                 Goals, reports, dan settings tetap mudah dijangkau di layar kecil.
-              </p>
+              </p> */}
             </div>
             <button
               type="button"
